@@ -2,25 +2,13 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "es2017", "es2020.promise"],
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "es2017",
+      "es2020.promise"
+    ],
     "baseUrl": "src",
-    "paths": {
-      "$pages/*": ["pages/*"],
-      "$pages": ["pages/index"],
-      "$components/*": ["components/*"],
-      "$shared/*": ["components/shared/*"],
-      "$utils/*": ["utils/*"],
-      "$contexts/*": ["contexts/*"],
-      "$types/*": ["types/*"],
-      "$hooks/*": ["hooks/*"],
-      "$config": ["config/index"],
-      "$config/*": ["config/*"],
-      "$constants/*": ["constants/*"],
-      "$mixins/*": ["components/shared/mixins/*"],
-      "$core/*": ["components/shared/core/*"],
-      "$icons/*": ["components/icons/*"]
-    },
     "moduleResolution": "node",
     "strict": true,
     "allowJs": true,
@@ -36,16 +24,22 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types", "./typings/**/*"],
-    "types": ["react", "node"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings/**/*"
+    ],
+    "types": [
+      "react",
+      "node"
+    ],
+    "noFallthroughCasesInSwitch": true
   },
   "exclude": [
     "node_modules",
-    "dist",
-    ".next",
-    "out",
-    "next.config.js",
-    "__tests__"
+    "dist"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
