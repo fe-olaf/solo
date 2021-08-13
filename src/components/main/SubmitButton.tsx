@@ -4,7 +4,7 @@ import qs from 'query-string'
 
 import styles from './SubmitButton.module.scss'
 
-import { isValidDate } from '../../utils/date'
+import { isValidDate, isValidRange } from '../../utils/date'
 
 const cx = classNames.bind(styles)
 
@@ -24,8 +24,12 @@ function SubmitButton({ formValues }: { formValues: FormValues }) {
       alert('마지막 연애 날짜 형식을 확인해주세요')
       return
     }
+    if (!isValidRange(lastday)) {
+      alert('정상적인 범위의 날짜가 아닙니다.')
+      return
+    }
 
-    history.push(`/result?${qs.stringify(formValues)}`)
+    history.push(`/report?${qs.stringify(formValues)}`)
   }
 
   return (
