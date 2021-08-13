@@ -9,7 +9,6 @@ import { isValidDate } from '../../utils/date'
 const cx = classNames.bind(styles)
 
 interface FormValues {
-  birthday: string
   lastday: string
   nickname: string
 }
@@ -18,13 +17,9 @@ function SubmitButton({ formValues }: { formValues: FormValues }) {
   const isAllInputed = Object.values(formValues).every(Boolean)
   const history = useHistory()
 
-  const { birthday, lastday } = formValues
+  const { lastday } = formValues
 
   const handleSubmit = () => {
-    if (!isValidDate(birthday)) {
-      alert('생년월일 날짜 형식을 확인해주세요')
-      return
-    }
     if (!isValidDate(lastday)) {
       alert('마지막 연애 날짜 형식을 확인해주세요')
       return

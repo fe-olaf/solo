@@ -13,7 +13,6 @@ const MAX_DATE_LENGTH = 8
 
 function MainPage() {
   const [formValues, setFormValues] = useState({
-    birthday: '',
     lastday: '',
     nickname: '',
   })
@@ -37,7 +36,7 @@ function MainPage() {
     })
   }
 
-  const { birthday, lastday, nickname } = formValues
+  const { lastday, nickname } = formValues
 
   return (
     <div className={cx('wrap_page')}>
@@ -47,12 +46,6 @@ function MainPage() {
         name="nickname"
         value={nickname}
         onChange={handleName}
-      />
-      <DateInput
-        label="생년월일"
-        name="birthday"
-        value={birthday}
-        onChange={handleDate}
       />
       <DateInput
         label="마지막 연애"

@@ -11,10 +11,6 @@ export function isValidDate(date: string): boolean {
   return true
 }
 
-export function totalDaysByBirtyday(birthday: string) {
-  return differenceInCalendarDays(new Date(), new Date(formatDate(birthday)))
-}
-
 export function totalSoloDaysByLastLoveday(loveday: string) {
   return differenceInCalendarDays(new Date(), new Date(formatDate(loveday)))
 }

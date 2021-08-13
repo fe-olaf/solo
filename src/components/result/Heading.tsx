@@ -1,13 +1,4 @@
-function generateHeadingTitle(soloDays: number, totalDays: number) {
-  if (soloDays === totalDays) {
-    return (
-      <div>
-        <div>🥇</div>
-        <div>채고채고 모태솔로상</div>
-      </div>
-    )
-  }
-
+function generateHeadingTitle(soloDays: number) {
   if (soloDays <= 100) {
     return (
       <div>
@@ -41,16 +32,10 @@ function generateHeadingTitle(soloDays: number, totalDays: number) {
   )
 }
 
-function Heading({
-  totalDays,
-  soloDays,
-}: {
-  totalDays: number
-  soloDays: number
-}) {
+function Heading({ soloDays }: { soloDays: number }) {
   return (
     <div>
-      <div>{generateHeadingTitle(soloDays, totalDays)}</div>
+      <div>{generateHeadingTitle(soloDays)}</div>
     </div>
   )
 }
