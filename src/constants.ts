@@ -1,4 +1,6 @@
 export const FOODS = [
+  { label: '🚗 아벤떼 풀옵', price: 24670000, unit: '대' },
+  { label: '🎡 롯데월드 자유이용권', price: 48000, unit: '개' },
   {
     label: '🍗 BBQ 황금 올리브 후라이드',
     price: 18000,
@@ -25,6 +27,4 @@ export const FOODS = [
     unit: '개',
   },
   { label: '🍧 베스킨라빈스 파인트', price: 8200, unit: '통' },
-  { label: '🚗 아벤떼 풀옵', price: 24670000, unit: '대' },
-  { label: '🎡 롯데월드 자유이용권', price: 48000, unit: '개' },
 ]
