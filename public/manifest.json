@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "솔로 계산기",
+  "name": "당신도 모르게 저축하고있던 돈을 계산해드립니다",
   "icons": [
     {
       "src": "favicon.ico",

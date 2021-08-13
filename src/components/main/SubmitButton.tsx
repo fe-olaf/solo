@@ -1,7 +1,10 @@
 import { useHistory } from 'react-router-dom'
 import classNames from 'classnames/bind'
+import qs from 'query-string'
 
 import styles from './SubmitButton.module.scss'
+
+import { isValidDate } from '../../utils/date'
 
 const cx = classNames.bind(styles)
 
@@ -11,36 +14,23 @@ interface FormValues {
   nickname: string
 }
 
-function parseDate(date: string) {
-  return date.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3')
-}
-
-function dateValidator(date: string): boolean {
-  if (!/^\d{8}$/.test(date) || !new Date(parseDate(date)).valueOf()) {
-    return false
-  }
-  return true
-}
-
 function SubmitButton({ formValues }: { formValues: FormValues }) {
   const isAllInputed = Object.values(formValues).every(Boolean)
   const history = useHistory()
 
-  const { birthday, lastday, nickname } = formValues
+  const { birthday, lastday } = formValues
 
   const handleSubmit = () => {
-    if (!dateValidator(birthday)) {
+    if (!isValidDate(birthday)) {
       alert('생년월일 날짜 형식을 확인해주세요')
       return
     }
-    if (!dateValidator(lastday)) {
+    if (!isValidDate(lastday)) {
       alert('마지막 연애 날짜 형식을 확인해주세요')
       return
     }
 
-    history.push(
-      `/result?birthday=${birthday}&lastday=${lastday}&nickname=${nickname}`,
-    )
+    history.push(`/result?${qs.stringify(formValues)}`)
   }
 
   return (
