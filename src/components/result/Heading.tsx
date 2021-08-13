@@ -9,7 +9,7 @@ function generateHeadingTitle(soloDays: number, isMossol?: boolean) {
     return (
       <>
         <div className={cx('txt_rank')}>🥇</div>
-        <h1 className={cx('txt_label')}>최강 모태솔로</h1>
+        <h1 className={cx('txt_label')}>모태솔로</h1>
       </>
     )
   }
@@ -26,7 +26,7 @@ function generateHeadingTitle(soloDays: number, isMossol?: boolean) {
     return (
       <>
         <div className={cx('txt_rank')}>🥉</div>
-        <h1 className={cx('txt_label')}>고생하상</h1>
+        <h1 className={cx('txt_label')}>고생이많상</h1>
       </>
     )
   }
@@ -42,7 +42,7 @@ function generateHeadingTitle(soloDays: number, isMossol?: boolean) {
   return (
     <>
       <div className={cx('txt_rank')}>🥇</div>
-      <h1 className={cx('txt_label')}>준 모태솔로상</h1>
+      <h1 className={cx('txt_label')}>곧 득도하상</h1>
     </>
   )
 }

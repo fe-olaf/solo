@@ -36,7 +36,7 @@ function ShareButton({ nickname }: { nickname: string }) {
             },
           },
           {
-            title: '나도 계산해보기',
+            title: '계산하러가기',
             link: {
               mobileWebUrl: 'http://solo.company-ego.com/',
               webUrl: 'http://solo.company-ego.com/',

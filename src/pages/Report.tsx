@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import qs from 'query-string'
 import classNames from 'classnames/bind'
+import Confetti from 'react-confetti'
 
 import { isValidDate, totalSoloDaysByLastLoveday } from '../utils/date'
 import Heading from '../components/result/Heading'
@@ -31,6 +32,7 @@ function ResultPage() {
 
   return (
     <div className={cx('wrap_report')}>
+      <Confetti recycle={false} />
       <Heading soloDays={soloDays} />
       <Contents nickname={nickname} soloDays={soloDays} />
       <ShareButton nickname={nickname} />
