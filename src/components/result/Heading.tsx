@@ -1,41 +1,62 @@
-function generateHeadingTitle(soloDays: number) {
+import classNames from 'classnames/bind'
+
+import styles from './Heading.module.scss'
+
+const cx = classNames.bind(styles)
+
+function generateHeadingTitle(soloDays: number, isMossol?: boolean) {
+  if (isMossol) {
+    return (
+      <>
+        <div className={cx('txt_rank')}>🥇</div>
+        <h1 className={cx('txt_label')}>최강 모태솔로</h1>
+      </>
+    )
+  }
+
   if (soloDays <= 100) {
     return (
-      <div>
-        <div>🍼</div>
-        <h1>갓난애기상</h1>
-      </div>
+      <>
+        <div className={cx('txt_rank')}>🍼</div>
+        <h1 className={cx('txt_label')}>이제 시작이상</h1>
+      </>
     )
   }
   if (soloDays <= 365) {
     return (
-      <div>
-        <div>🥉</div>
-        <div>동메달</div>
-      </div>
+      <>
+        <div className={cx('txt_rank')}>🥉</div>
+        <h1 className={cx('txt_label')}>고생하상</h1>
+      </>
     )
   }
   if (soloDays <= 1095) {
     return (
-      <div>
-        <div>🥈</div>
-        <div>은메달</div>
-      </div>
+      <>
+        <div className={cx('txt_rank')}>🥈</div>
+        <h1 className={cx('txt_label')}>까마득상</h1>
+      </>
     )
   }
 
   return (
-    <div>
-      <div>🥇</div>
-      <div>준 모태솔로상</div>
-    </div>
+    <>
+      <div className={cx('txt_rank')}>🥇</div>
+      <h1 className={cx('txt_label')}>준 모태솔로상</h1>
+    </>
   )
 }
 
-function Heading({ soloDays }: { soloDays: number }) {
+function Heading({
+  soloDays,
+  isMossol,
+}: {
+  soloDays: number
+  isMossol?: boolean
+}) {
   return (
-    <div>
-      <div>{generateHeadingTitle(soloDays)}</div>
+    <div className={cx('article')}>
+      {generateHeadingTitle(soloDays, isMossol)}
     </div>
   )
 }

@@ -1,11 +1,16 @@
 import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import qs from 'query-string'
+import classNames from 'classnames/bind'
 
 import { isValidDate, totalSoloDaysByLastLoveday } from '../utils/date'
 import Heading from '../components/result/Heading'
 import Contents from '../components/result/Contents'
 import ShareButton from '../components/result/ShareButton'
+
+import styles from './Report.module.scss'
+
+const cx = classNames.bind(styles)
 
 function ResultPage() {
   const history = useHistory()
@@ -25,7 +30,7 @@ function ResultPage() {
   const soloDays = totalSoloDaysByLastLoveday(lastday)
 
   return (
-    <div>
+    <div className={cx('wrap_report')}>
       <Heading soloDays={soloDays} />
       <Contents nickname={nickname} soloDays={soloDays} />
       <ShareButton nickname={nickname} />
