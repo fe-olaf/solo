@@ -1,7 +1,21 @@
 .wrap_page {
     width: 100%;
-    max-width: 720px;
+    max-width: 400px;
     margin: 0 auto;
     min-height: 100vh;
     max-height: 100vh;
+    padding: 0 20px;
+
+
+    .txt_heading {
+        padding-top: 50px;
+        white-space: pre-wrap;
+        text-shadow: 4px 4px #af4464, 6px 6px #41927a;
+        color: #f2c41f;
+        font-weight: 500;
+        margin-bottom: 100px;
+        font-size: 50px;
+        line-height: 1.2;
+        text-align: center;
+    }
 }

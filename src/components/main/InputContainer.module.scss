@@ -1,0 +1,17 @@
+.wrap_input {
+    margin-bottom: 20px;
+
+    * input {
+        margin-top: 7px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px 7px;
+        border: 2px solid #ce3f68;
+        border-radius: 5px;
+        line-height: 1.5;
+    }
+
+    * input::placeholder {
+        line-height: 1.5;
+    }
+}

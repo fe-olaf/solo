@@ -1,13 +1,8 @@
 import React from 'react'
-import classNames from 'classnames/bind'
 
 import InputContainer from './InputContainer'
 
-import styles from './DateInput.module.scss'
-
-const cx = classNames.bind(styles)
-
-function DateInput({
+function NameInput({
   label,
   onChange,
   value,
@@ -24,11 +19,10 @@ function DateInput({
         name={name}
         value={value}
         onChange={onChange}
-        className={cx('date_input')}
-        placeholder="날짜를 입력해주세요 (ex. 19930710)"
+        placeholder="이름을 입력해주세요 (ex. 김말자)"
       />
     </InputContainer>
   )
 }
 
-export default DateInput
+export default NameInput

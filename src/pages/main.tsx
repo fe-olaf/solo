@@ -3,7 +3,9 @@ import classNames from 'classnames/bind'
 
 import styles from './Main.module.scss'
 
-import DateInput from '../components/shared/DateInput'
+import NameInput from '../components/main/NameInput'
+import DateInput from '../components/main/DateInput'
+import SubmitButton from '../components/main/SubmitButton'
 
 const cx = classNames.bind(styles)
 
@@ -28,10 +30,24 @@ function MainPage() {
     })
   }
 
-  const { birthday, lastday } = formValues
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormValues({
+      ...formValues,
+      nickname: e.target.value,
+    })
+  }
+
+  const { birthday, lastday, nickname } = formValues
 
   return (
     <div className={cx('wrap_page')}>
+      <h1 className={cx('txt_heading')}>{`솔로\n계산기`}</h1>
+      <NameInput
+        label="이름"
+        name="nickname"
+        value={nickname}
+        onChange={handleName}
+      />
       <DateInput
         label="생년월일"
         name="birthday"
@@ -44,6 +60,7 @@ function MainPage() {
         value={lastday}
         onChange={handleDate}
       />
+      <SubmitButton formValues={formValues} />
     </div>
   )
 }
