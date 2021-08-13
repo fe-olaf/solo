@@ -1,10 +1,10 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import MainPage from './pages/main'
+import MainPage from './pages/Main'
 import ResultPage from './pages/result'
 import NotFoundPage from './pages/notFound'
 
-import './App.scss'
+import './scss/reset.scss'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/">
           <MainPage />
         </Route>
-        <Route path="/:id">
+        <Route path="/result">
           <ResultPage />
         </Route>
         <Route>
