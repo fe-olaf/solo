@@ -1,0 +1,19 @@
+.article {
+    padding: 50px 0 10px;
+
+    .txt_title {
+        color: #41927a;
+        text-shadow: 1px 1px #f2c41f;
+        text-align: center;
+    }
+
+    .wrap_button {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 10px 0;
+
+        .ico_kakao{
+            margin-right: 5px;
+        }
+    }
+}

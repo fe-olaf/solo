@@ -11,7 +11,7 @@ function InputContainer({
 }: React.PropsWithChildren<{ label: string }>) {
   return (
     <div className={cx('wrap_input')}>
-      <div>{label}</div>
+      <div className={cx('txt_label')}>{label}</div>
       <div>{children}</div>
     </div>
   )

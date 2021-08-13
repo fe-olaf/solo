@@ -40,6 +40,7 @@ function MainPage() {
 
   return (
     <div className={cx('wrap_page')}>
+      <div className={cx('bg')}></div>
       <h1 className={cx('txt_heading')}>{`솔로\n계산기`}</h1>
       <NameInput
         label="이름"

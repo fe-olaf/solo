@@ -6,6 +6,17 @@
     max-height: 100vh;
     padding: 0 20px;
 
+    .bg {
+        width: 100vh;
+        height: 245px;
+        background: #41927a;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: -3px;
+        z-index: -1;
+    }
+
 
     .txt_heading {
         padding-top: 50px;

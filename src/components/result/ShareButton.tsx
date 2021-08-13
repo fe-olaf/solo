@@ -38,8 +38,8 @@ function ShareButton({ nickname }: { nickname: string }) {
           {
             title: '나도 계산해보기',
             link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href,
+              mobileWebUrl: 'http://solo.company-ego.com/',
+              webUrl: 'http://solo.company-ego.com/',
             },
           },
         ],

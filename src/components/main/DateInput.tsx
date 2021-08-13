@@ -19,7 +19,7 @@ function DateInput({
         name={name}
         value={value}
         onChange={onChange}
-        placeholder="날짜를 입력해주세요 (ex. 19930710)"
+        placeholder="날짜를 입력해주세요 (ex. 20210320)"
       />
     </InputContainer>
   )
