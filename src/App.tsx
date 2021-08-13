@@ -1,8 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 
-import MainPage from './pages/Main'
-import ResultPage from './pages/Result'
+import HomePage from './pages/Home'
+import ReportPage from './pages/Report'
 import NotFoundPage from './pages/notFound'
 
 import './scss/reset.scss'
@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <MainPage />
+            <HomePage />
           </Route>
-          <Route path="/result">
-            <ResultPage />
+          <Route path="/report">
+            <ReportPage />
           </Route>
           <Route>
             <NotFoundPage />

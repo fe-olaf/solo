@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames/bind'
 
-import styles from './Main.module.scss'
+import styles from './Home.module.scss'
 
 import NameInput from '../components/main/NameInput'
 import DateInput from '../components/main/DateInput'
