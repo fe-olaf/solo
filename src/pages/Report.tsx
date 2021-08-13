@@ -32,7 +32,11 @@ function ResultPage() {
 
   return (
     <div className={cx('wrap_report')}>
-      <Confetti recycle={false} />
+      <Confetti
+        recycle={false}
+        width={window.innerWidth}
+        height={window.innerHeight}
+      />
       <Heading soloDays={soloDays} />
       <Contents nickname={nickname} soloDays={soloDays} />
       <ShareButton nickname={nickname} />
